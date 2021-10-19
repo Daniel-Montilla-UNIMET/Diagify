@@ -1,22 +1,25 @@
 using EasyJoystick;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private float speed = 32f;
-    [SerializeField] private Joystick joystick;
+    public float speed = 32f;
+    public Joystick joystick;
+    public Rigidbody2D body;
 
     float dx = 0, dy = 0;
     void Update()
     {
-        dx = joystick.Horizontal();
-        dy = joystick.Vertical();
+        dx = joystick.Horizontal() * speed;
+        dy = joystick.Vertical() * speed;
+        body.velocity = new Vector2(dx, dy);
     }
 
-    private void FixedUpdate()
+
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        transform.position += speed * Time.fixedDeltaTime * new Vector3(dx, dy, 0);
+        // TODO: Chekear que tipo de trigger es
+
     }
 }
