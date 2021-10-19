@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
 
     private Item pickableItem;
 
+    private bool looking = true;    // true -> right, false -> left
+
     public UnityEvent onItemEnter;
     public UnityEvent onItemExit;
 
@@ -26,13 +28,11 @@ public class Player : MonoBehaviour
         recogerButton.onClick.AddListener(recogerItem);
     }
 
-    private void recogerItem()
+    private void Flip()
     {
-        if (pickableItem != null)
-        {
-            pickableItem.Recoger();
-            recogerButton.gameObject.SetActive(false);
-        }
+        looking = !looking;
+        bool flip = GetComponent<SpriteRenderer>().flipX;
+        GetComponent<SpriteRenderer>().flipX = !flip;
     }
 
     void Update()
@@ -42,10 +42,21 @@ public class Player : MonoBehaviour
         dy = joystick.Vertical() * speed;
         body.velocity = new Vector2(dx, dy);
 
+        if (dx < 0 && looking)
+        {
+            Flip();
+        } else if (dx > 0 && !looking)
+        {
+            Flip();
+        }
+
+
+
+
         // Animaciones
         if (dx == 0 && dy == 0) {
             animator.SetFloat("Speed",0);
-        } else{
+        } else {
             animator.SetFloat("Speed",1f);
         }
     }
@@ -68,5 +79,14 @@ public class Player : MonoBehaviour
         onItemExit.Invoke();
 
         pickableItem = null;
+    }
+
+    private void recogerItem()
+    {
+        if (pickableItem != null)
+        {
+            pickableItem.Recoger();
+            recogerButton.gameObject.SetActive(false);
+        }
     }
 }
