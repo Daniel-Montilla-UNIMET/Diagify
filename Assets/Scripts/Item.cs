@@ -7,7 +7,7 @@ public class Item : MonoBehaviour
 {
     public void Recoger()
     {
-        Debug.Log("HELLO!");
+        gameObject.SetActive(false);
     }
 
     private void Reset()
