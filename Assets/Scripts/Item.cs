@@ -2,17 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(BoxCollider2D))]
 public class Item : MonoBehaviour
 {
-    //public BoxCollider2D triggerArea;
-
-    private void Start()
+    public void Recoger()
     {
-        
+        Debug.Log("HELLO!");
     }
 
-    private void Detect()
+    private void Reset()
     {
-        //bool detected = Physics2D.OverlapBox()
+        GetComponent<Collider2D>().isTrigger = true;
     }
 }
