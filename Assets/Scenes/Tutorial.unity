@@ -10020,6 +10020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectPoint: {fileID: 1963437129}
+  hitbox: {fileID: 1963437132}
   layer:
     serializedVersion: 2
     m_Bits: 64
