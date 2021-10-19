@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "emulator-5554",
+    "m_SelectedDeviceId": "712KPRW1065766",
     "m_SelectedPackage": {
-        "deviceId": "emulator-5554",
+        "deviceId": "712KPRW1065766",
         "name": "com.DefaultCompany.com.unity.template.mobile2D",
-        "processId": 22578,
+        "processId": 3661,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -12,6 +12,48 @@
             "deviceId": "emulator-5554",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 22578,
+            "exited": false
+        },
+        {
+            "deviceId": "712KPRW1065766",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 18490,
+            "exited": false
+        },
+        {
+            "deviceId": "712KPRW1065766",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 29589,
+            "exited": false
+        },
+        {
+            "deviceId": "712KPRW1065766",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 32428,
+            "exited": false
+        },
+        {
+            "deviceId": "712KPRW1065766",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 1365,
+            "exited": false
+        },
+        {
+            "deviceId": "712KPRW1065766",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 2204,
+            "exited": false
+        },
+        {
+            "deviceId": "712KPRW1065766",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 3020,
+            "exited": false
+        },
+        {
+            "deviceId": "712KPRW1065766",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 3661,
             "exited": false
         }
     ],
