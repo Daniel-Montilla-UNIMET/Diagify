@@ -36,6 +36,7 @@ public class Puerta : MonoBehaviour
             if (hasAnimation)
             {
                animator.SetBool("Abierto",true);
+               Application.LoadLevel(Application.loadedLevel);
             } else
             {
                 sprite.enabled = false;
