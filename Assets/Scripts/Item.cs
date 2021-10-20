@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(BoxCollider2D))]
 
@@ -8,10 +9,12 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     public KeyColor color = KeyColor.none;
+    public UnityEvent onPickup;
 
     public KeyColor Recoger()
     {
         gameObject.SetActive(false);
+        onPickup.Invoke();
         return color;
     }
 

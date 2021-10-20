@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 
 public class Puerta : MonoBehaviour
@@ -13,6 +14,7 @@ public class Puerta : MonoBehaviour
     private BoxCollider2D wallZone;
 
     public bool hasAnimation = false;
+    public UnityEvent onOpen;
 
     private void Start()
     {
@@ -26,6 +28,7 @@ public class Puerta : MonoBehaviour
             wallZone.enabled = false;
             triggerZone.enabled = false;
             SpriteRenderer sprite = GetComponent<SpriteRenderer>();
+            onOpen.Invoke();
             if (hasAnimation)
             {
 
