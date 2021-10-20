@@ -1,4 +1,5 @@
 using EasyJoystick;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -13,26 +14,22 @@ public class Player : MonoBehaviour
 
     public Joystick joystick;
     public Button recogerButton;
+    public Button abrirButton;
 
     private Item pickableItem;
+    private Puerta openablePuerta;
 
     private bool looking = true;    // true -> right, false -> left
 
-    public UnityEvent onItemEnter;
-    public UnityEvent onItemExit;
+    // TODO: implementar systema de inventario mas robusto
+    private List<KeyColor> inventario = new List<KeyColor>();
 
     float dx = 0, dy = 0;
 
     private void Start()
     {
-        recogerButton.onClick.AddListener(recogerItem);
-    }
-
-    private void Flip()
-    {
-        looking = !looking;
-        bool flip = GetComponent<SpriteRenderer>().flipX;
-        GetComponent<SpriteRenderer>().flipX = !flip;
+        recogerButton.onClick.AddListener(RecogerItem);
+        abrirButton.onClick.AddListener(AbrirPuerta);
     }
 
     void Update()
@@ -50,9 +47,6 @@ public class Player : MonoBehaviour
             Flip();
         }
 
-
-
-
         // Animaciones
         if (dx == 0 && dy == 0) {
             animator.SetFloat("Speed",0);
@@ -63,30 +57,67 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // TODO: Check si es una puerta, area
         GameObject obj = other.gameObject;
 
         if (obj.tag == "Item")
         {
             Item item = obj.GetComponent<Item>();
-            onItemEnter.Invoke();
+            recogerButton.gameObject.SetActive(true);
             pickableItem = item;
         };
+
+        if (obj.tag == "Puerta")
+        {
+            Puerta puerta = obj.GetComponentInParent<Puerta>();
+            abrirButton.gameObject.SetActive(true);
+            openablePuerta = puerta;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        onItemExit.Invoke();
+        GameObject obj = other.gameObject;
 
-        pickableItem = null;
+        if (obj.tag == "Item")
+        {
+            recogerButton.gameObject.SetActive(false);
+            pickableItem = null;
+        };
+
+        if (obj.tag == "Puerta")
+        {
+            abrirButton.gameObject.SetActive(false);
+            openablePuerta = null;
+        }
     }
 
-    private void recogerItem()
+    private void RecogerItem()
     {
         if (pickableItem != null)
         {
-            pickableItem.Recoger();
+            inventario.Add(pickableItem.Recoger());
             recogerButton.gameObject.SetActive(false);
         }
+    }
+
+    private void AbrirPuerta()
+    {
+        if (openablePuerta != null)
+        {
+            if (openablePuerta.Abrir(inventario))
+            {
+                abrirButton.gameObject.SetActive(false);
+            } else
+            {
+                // TODO: CUANDO NO TIENE LLAVE NECESARIA PARA ABRIR PUERTA
+            }
+        }
+    }
+
+    private void Flip()
+    {
+        looking = !looking;
+        bool flip = GetComponent<SpriteRenderer>().flipX;
+        GetComponent<SpriteRenderer>().flipX = !flip;
     }
 }
