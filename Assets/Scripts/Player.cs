@@ -72,6 +72,12 @@ public class Player : MonoBehaviour
             abrirButton.gameObject.SetActive(true);
             openablePuerta = puerta;
         }
+
+        if (obj.tag == "Win")
+        {
+            ChangeScene change = obj.GetComponent<ChangeScene>();
+            change.loadScene("WinScene");
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
