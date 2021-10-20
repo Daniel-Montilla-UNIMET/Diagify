@@ -12,6 +12,8 @@ public class Puerta : MonoBehaviour
     public GameObject wallZoneObj;
     private BoxCollider2D wallZone;
 
+    public bool hasAnimation = false;
+
     private void Start()
     {
         triggerZone = triggerZoneObj.GetComponent<BoxCollider2D>();
@@ -23,6 +25,14 @@ public class Puerta : MonoBehaviour
         {
             wallZone.enabled = false;
             triggerZone.enabled = false;
+            SpriteRenderer sprite = GetComponent<SpriteRenderer>();
+            if (hasAnimation)
+            {
+
+            } else
+            {
+                sprite.enabled = false;
+            }
             inv.Remove(requiredColor);
             return true;
         } else
