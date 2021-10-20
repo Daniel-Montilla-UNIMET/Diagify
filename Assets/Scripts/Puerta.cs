@@ -15,11 +15,15 @@ public class Puerta : MonoBehaviour
 
     public bool hasAnimation = false;
     public UnityEvent onOpen;
+    private Animator animator;
 
     private void Start()
     {
         triggerZone = triggerZoneObj.GetComponent<BoxCollider2D>();
         wallZone = wallZoneObj.GetComponent<BoxCollider2D>();
+        if (hasAnimation) {
+            animator = GetComponent<Animator>();
+        }               
     }
     public bool Abrir(List<KeyColor> inv)
     {
@@ -31,7 +35,7 @@ public class Puerta : MonoBehaviour
             onOpen.Invoke();
             if (hasAnimation)
             {
-
+               animator.SetBool("Abierto",true);
             } else
             {
                 sprite.enabled = false;
