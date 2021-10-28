@@ -7,15 +7,16 @@ TagManager:
   - Item
   - Puerta
   - Win
+  - Enemigo
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Player
+  - 
   - Water
   - UI
-  - Enemigo
-  - Item
+  - Obstacle
+  - 
   - 
   - 
   - 
@@ -43,4 +44,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Piso
+    uniqueID: 2244683319
+    locked: 0
+  - name: Items
+    uniqueID: 2365120945
+    locked: 0
+  - name: Paredes_Inferior
+    uniqueID: 2247435243
+    locked: 0
+  - name: Player
+    uniqueID: 1758630265
+    locked: 0
+  - name: Paredes
+    uniqueID: 2548216769
     locked: 0
