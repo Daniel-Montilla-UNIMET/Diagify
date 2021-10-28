@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     private Puerta openablePuerta;
 
     private bool looking = true;    // true -> right, false -> left
+    private bool moviendo = false;
 
     // TODO: implementar systema de inventario mas robusto
     private List<KeyColor> inventario = new List<KeyColor>();
@@ -48,11 +49,9 @@ public class Player : MonoBehaviour
         }
 
         // Animaciones
-        if (dx == 0 && dy == 0) {
-            animator.SetFloat("Speed",0);
-        } else {
-            animator.SetFloat("Speed",1f);
-        }
+        moviendo = body.velocity == Vector2.zero;
+
+        animator.SetBool("moviendo", moviendo);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
