@@ -25,6 +25,7 @@ public class Puerta : MonoBehaviour
             animator = GetComponent<Animator>();
         }               
     }
+    // se agrega el sprite de la puerta para sus futuras animaciones
     public bool Abrir(List<KeyColor> inv)
     {
         if (inv.Contains(requiredColor))
