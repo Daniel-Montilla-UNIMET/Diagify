@@ -1,7 +1,6 @@
 using EasyJoystick;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 // TODO: crear clase unificadora de UI para organizar
@@ -76,6 +75,11 @@ public class Player : MonoBehaviour
         {
             ChangeScene change = obj.GetComponent<ChangeScene>();
             change.loadScene("WinScene");
+        }
+        
+        if (obj.tag == "Enemigo")
+        {
+            Debug.Log("ENEMIGO TE PEGO");
         }
     }
 
