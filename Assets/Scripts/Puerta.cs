@@ -13,6 +13,9 @@ public class Puerta : MonoBehaviour
     public GameObject wallZoneObj;
     private BoxCollider2D wallZone;
 
+    public AudioClip SonidoAbrir;
+    private AudioSource SonidoPuerta;
+
     public bool hasAnimation = false;
     public UnityEvent onOpen;
     private Animator animator;
@@ -21,6 +24,7 @@ public class Puerta : MonoBehaviour
     {
         triggerZone = triggerZoneObj.GetComponent<BoxCollider2D>();
         wallZone = wallZoneObj.GetComponent<BoxCollider2D>();
+        SonidoPuerta = GetComponent<AudioSource>();
         if (hasAnimation) {
             animator = GetComponent<Animator>();
         }               
@@ -37,6 +41,7 @@ public class Puerta : MonoBehaviour
             if (hasAnimation)
             {
                animator.SetBool("Abierto", true);
+               SonidoPuerta.PlayOneShot(SonidoAbrir,1.0f);
             } else
             {
                 sprite.enabled = false;

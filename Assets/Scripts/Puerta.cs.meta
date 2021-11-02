@@ -3,7 +3,10 @@ guid: 47fb64a0c82e1bf4b948bbf245a7512f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - triggerZoneObj: {instanceID: 0}
+  - wallZoneObj: {instanceID: 0}
+  - SonidoAbrir: {fileID: 8300000, guid: 170b9fb48e3c74d2fbb82e09571fd04f, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
