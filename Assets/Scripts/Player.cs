@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+
 // TODO: crear clase unificadora de UI para organizar
 public class Player : MonoBehaviour
 {
@@ -17,6 +19,7 @@ public class Player : MonoBehaviour
 
     private Item pickableItem;
     private Puerta openablePuerta;
+    
 
     private bool looking = true;    // true -> right, false -> left
     private bool moviendo = false;

@@ -27,6 +27,7 @@ public class Puerta : MonoBehaviour
         SonidoPuerta = GetComponent<AudioSource>();
         if (hasAnimation) {
             animator = GetComponent<Animator>();
+            
         }               
     }
     // se agrega el sprite de la puerta para sus futuras animaciones
