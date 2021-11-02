@@ -70,12 +70,6 @@ public class Player : MonoBehaviour
             abrirButton.gameObject.SetActive(true);
             openablePuerta = puerta;
         }
-
-        if (obj.tag == "Win")
-        {
-            ChangeScene change = obj.GetComponent<ChangeScene>();
-            change.loadScene("WinScene");
-        }
         
         if (obj.tag == "Enemigo")
         {
