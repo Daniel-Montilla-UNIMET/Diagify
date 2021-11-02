@@ -9,6 +9,7 @@ public class Enemigo : MonoBehaviour
 
     private AIDestinationSetter destinationScript;
     private Transform originalSpot;
+    public Animator animator;
 
     void Start()
     {
@@ -19,10 +20,12 @@ public class Enemigo : MonoBehaviour
     public void changeTarget(Transform newTarget)
     {
         destinationScript.target = newTarget;
+        animator.SetBool("Moviendo", true);
     }
 
     public void goToOriginal()
     {
         destinationScript.target = originalSpot;
+        animator.SetBool("Moviendo", false);
     }
 }
