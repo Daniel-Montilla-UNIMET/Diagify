@@ -42,7 +42,7 @@ public class Puerta : MonoBehaviour
             if (hasAnimation)
             {
                animator.SetBool("Abierto", true);
-               SonidoPuerta.PlayOneShot(SonidoAbrir,1.0f);
+               
             } else
             {
                 sprite.enabled = false;
