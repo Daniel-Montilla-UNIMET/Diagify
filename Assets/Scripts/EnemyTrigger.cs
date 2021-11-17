@@ -17,7 +17,7 @@ public class EnemyTrigger : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("exit");
+        Debug.Log("SALIENDO");
         Debug.Log(other.gameObject.tag);
         if (other.gameObject.tag == "Player")
         {
