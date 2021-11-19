@@ -8,6 +8,7 @@ TagManager:
   - Puerta
   - Win
   - Enemigo
+  - Trampa
   layers:
   - Default
   - TransparentFX

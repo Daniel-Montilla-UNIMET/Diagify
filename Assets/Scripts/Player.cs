@@ -79,6 +79,12 @@ public class Player : MonoBehaviour
         {
             SceneManager.LoadScene("Lost");
         }
+
+        if (obj.tag == "Trampa")
+        {
+            // TODO: HACER SCENE DE TRAMPA
+            SceneManager.LoadScene("Lost");
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
