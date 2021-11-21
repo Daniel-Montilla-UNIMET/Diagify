@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4345486853261170873}
   - component: {fileID: 596370171205091487}
   - component: {fileID: 7845184635978813213}
+  - component: {fileID: 3746683271537872956}
   m_Layer: 0
   m_Name: Palanca
   m_TagString: Untagged
@@ -72,6 +73,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btn: {fileID: 0}
+  spikesObj: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!212 &7845184635978813213
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -123,3 +126,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &3746683271537872956
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4969068469270608442}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2df9c2ce5abe80c46b356539f0c66e0a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
