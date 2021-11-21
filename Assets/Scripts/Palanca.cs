@@ -11,7 +11,7 @@ public class Palanca : MonoBehaviour
     private Spike[] spikes;
     public Animator animator;
 
-    private bool activo = true; 
+    private bool activo = false; 
 
     private void Start()
     {
@@ -44,10 +44,13 @@ public class Palanca : MonoBehaviour
 
     private void toggleSpikes()
     {
+        activo = !activo;
+        animator.SetBool("activo", activo);
+        
         foreach (Spike s in spikes)
         {
             s.toggle();
-            animator.SetBool("activo", activo);
+            
             
             
         }
