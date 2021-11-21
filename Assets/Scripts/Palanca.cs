@@ -37,7 +37,7 @@ public class Palanca : MonoBehaviour
         if (obj.tag == "Player")
         {
             btn.SetActive(false);
-            animator.SetBool("activo", activo);
+            
             
         }
     }
@@ -47,7 +47,8 @@ public class Palanca : MonoBehaviour
         foreach (Spike s in spikes)
         {
             s.toggle();
-            animator.SetBool("activo", activo);
+            
+            
             
         }
     }
