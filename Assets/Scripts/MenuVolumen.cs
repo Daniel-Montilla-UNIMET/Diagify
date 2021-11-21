@@ -11,7 +11,7 @@ public class MenuVolumen : MonoBehaviour
 
     void Start()
     {
-        slider.value = PlayerPrefs.GetFloat("volumenAudio",0.5f;
+        slider.value = PlayerPrefs.GetFloat("volumenAudio",0.5f);
         AudioListener.volume = slider.value;
         
     }
