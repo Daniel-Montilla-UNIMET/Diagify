@@ -47,7 +47,7 @@ public class Palanca : MonoBehaviour
         foreach (Spike s in spikes)
         {
             s.toggle();
-            
+            animator.SetBool("activo", activo);
             
             
         }
