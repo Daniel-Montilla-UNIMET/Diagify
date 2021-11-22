@@ -3,19 +3,16 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
-[RequireComponent(typeof(GameObject))]
 public class Palanca : MonoBehaviour
 {
     public GameObject btn;
-    public GameObject spikesObj;
-    private Spike[] spikes;
+    public Spike[] spikes;
     public Animator animator;
 
     private bool activo = false; 
 
     private void Start()
     {
-        spikes = spikesObj.GetComponentsInChildren<Spike>();
         btn.GetComponent<Button>().onClick.AddListener(toggleSpikes);
     }
 
