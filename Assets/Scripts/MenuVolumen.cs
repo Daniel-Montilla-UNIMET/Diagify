@@ -7,19 +7,21 @@ public class MenuVolumen : MonoBehaviour
 {
     // Start is called before the first frame update
     public Slider slider;
-    public float sliderValue;
+    public float slidervalue;
+    public AudioSource audiosource;
 
     void Start()
     {
         slider.value = PlayerPrefs.GetFloat("volumenAudio",0.5f);
-        AudioListener.volume = slider.value;
+        audiosource.volume = slider.value;
         
     }
 
     public void ChangeVolume(float valor){
-        sliderValue = valor;
-        PlayerPrefs.SetFloat("volumenAudio",sliderValue);
-        AudioListener.volume = slider.value;
+        slider.value = valor;
+        slidervalue = slider.value;
+        PlayerPrefs.SetFloat("volumenAudio",slidervalue);
+        audiosource.volume = slider.value;
     }
 
 
