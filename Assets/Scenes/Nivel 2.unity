@@ -928,7 +928,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 1
-  m_Offset: {x: -37.620327, y: -12.946896}
+  m_Offset: {x: -37.620327, y: -12.748831}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1102,7 +1102,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 234976108}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -80.76, y: -13.48, z: -1}
+  m_LocalPosition: {x: -80.76, y: -12.65, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1827926410}
@@ -1773,7 +1773,7 @@ PrefabInstance:
     - target: {fileID: 20792127183396764, guid: 41e1e8be851a7d044ad7afd7b6f97973, type: 3}
       propertyPath: onOpen.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 938763660}
     - target: {fileID: 20792127183396764, guid: 41e1e8be851a7d044ad7afd7b6f97973, type: 3}
       propertyPath: onOpen.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -3615,7 +3615,7 @@ PrefabInstance:
     - target: {fileID: 8378605101435190992, guid: ccefdd2073985b7418d562346abb0984, type: 3}
       propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 938763660}
     - target: {fileID: 8378605101435190992, guid: ccefdd2073985b7418d562346abb0984, type: 3}
       propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -6695,7 +6695,7 @@ PrefabInstance:
     - target: {fileID: 20792127183396764, guid: 41e1e8be851a7d044ad7afd7b6f97973, type: 3}
       propertyPath: onOpen.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 938763660}
     - target: {fileID: 20792127183396764, guid: 41e1e8be851a7d044ad7afd7b6f97973, type: 3}
       propertyPath: onOpen.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -6722,11 +6722,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 929831169878211319, guid: 41e1e8be851a7d044ad7afd7b6f97973, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -36.93
+      value: -37
       objectReference: {fileID: 0}
     - target: {fileID: 929831169878211319, guid: 41e1e8be851a7d044ad7afd7b6f97973, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.09
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 929831169878211319, guid: 41e1e8be851a7d044ad7afd7b6f97973, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9327,7 +9327,7 @@ PrefabInstance:
     - target: {fileID: 8378605101435190992, guid: ccefdd2073985b7418d562346abb0984, type: 3}
       propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 938763660}
     - target: {fileID: 8378605101435190992, guid: ccefdd2073985b7418d562346abb0984, type: 3}
       propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -15251,7 +15251,7 @@ PrefabInstance:
     - target: {fileID: 8378605101435190992, guid: ccefdd2073985b7418d562346abb0984, type: 3}
       propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 938763660}
     - target: {fileID: 8378605101435190992, guid: ccefdd2073985b7418d562346abb0984, type: 3}
       propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -15356,7 +15356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1686654802983326254, guid: 41e1e8be851a7d044ad7afd7b6f97973, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3
+      value: -3.97
       objectReference: {fileID: 0}
     - target: {fileID: 5615205712337853789, guid: 41e1e8be851a7d044ad7afd7b6f97973, type: 3}
       propertyPath: m_Size.y
@@ -15365,6 +15365,10 @@ PrefabInstance:
     - target: {fileID: 5615205712337853789, guid: 41e1e8be851a7d044ad7afd7b6f97973, type: 3}
       propertyPath: m_Offset.y
       value: 0.4032159
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020854084711557460, guid: 41e1e8be851a7d044ad7afd7b6f97973, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.63
       objectReference: {fileID: 0}
     - target: {fileID: 6610961826224125237, guid: 41e1e8be851a7d044ad7afd7b6f97973, type: 3}
       propertyPath: m_Color.b
@@ -15843,7 +15847,7 @@ PrefabInstance:
     - target: {fileID: 20792127183396764, guid: 41e1e8be851a7d044ad7afd7b6f97973, type: 3}
       propertyPath: onOpen.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 938763660}
     - target: {fileID: 20792127183396764, guid: 41e1e8be851a7d044ad7afd7b6f97973, type: 3}
       propertyPath: onOpen.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -27185,7 +27189,7 @@ PrefabInstance:
     - target: {fileID: 8378605101435190992, guid: ccefdd2073985b7418d562346abb0984, type: 3}
       propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 938763660}
     - target: {fileID: 8378605101435190992, guid: ccefdd2073985b7418d562346abb0984, type: 3}
       propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
